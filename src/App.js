@@ -5,7 +5,6 @@ import Header from './Header';
 import Home from './pages/Home';
 import Tools from './pages/Tools';
 import Photo from './pages/Photo';
-import AI from './pages/AI';
 import Blog from './pages/Blog';
 import Login from './pages/Login';
 import Footer from './Footer';
