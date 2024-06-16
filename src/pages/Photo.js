@@ -16,7 +16,7 @@ const Photo = () => (
         <p>Detail about photo 2.</p>
       </div>
       <div className="p-6 bg-white shadow-md rounded">
-        <img src="https://via.placeholder.com/150" alt="Example" className="mb-2"/>
+        <img src="https://telegraph-image-3qp.pages.dev/file/052c69f21af91acda0a5a.jpg" alt="Example" className="mb-2"/>
         <h3 className="text-2xl mb-2">Photo 3</h3>
         <p>Detail about photo 3.</p>
       </div>

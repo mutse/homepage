@@ -5,7 +5,7 @@ const Tools = () => (
   <div className="container mx-auto text-center py-20">
     <h2 className="text-4xl mb-4">Tools</h2>
     <p className="mb-4">Explore our wide range of tools designed to help you succeed.</p>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <Card
         title="Cloudflare Docker Mirror"
         description="My Docker image repository"
