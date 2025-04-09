@@ -62,7 +62,7 @@ const Header = () => {
               </div>
             )}
           </div>
-          <a href="https://mutse.serv00.net/" className="text-white hover:text-gray-300">AList</a>
+          <a href="https://libretv.mutse.top" className="text-white hover:text-gray-300">LibreTV</a>
           <Link to="/tools" className="text-white hover:text-gray-300">Tools</Link>
           <Link to="/login" className="text-white hover:text-gray-300">Login</Link>
         </nav>
