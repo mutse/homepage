@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => (
   <div className="container mx-auto text-center py-20">
-    <h2 className="text-4xl mb-4">Welcome to Mutse's Landing Page</h2>
+    <h2 className="text-4xl mb-4">Welcome to Mutse's Personal Page</h2>
     <p className="mb-4">Discover the amazing features I offer to improve your AI experience.</p>
     <p className="mb-4">
       <center>

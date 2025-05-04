@@ -6,9 +6,15 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    // Use environment variables for email and password
+    const envEmail = process.env.REACT_APP_LOGIN_EMAIL;
+    const envPassword = process.env.REACT_APP_LOGIN_PASSWORD;
+    if (email === envEmail && password === envPassword) {
+      console.log('Login successful');
+      window.location.href = 'https://alist.mutse.top'; // Redirect to external website
+    } else {
+      console.log('Invalid email or password');
+    }
   };
 
   return (

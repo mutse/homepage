@@ -1,27 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import photoConfig from '../config/photoConfig';
 
-const Photo = () => (
-  <div className="container mx-auto text-center py-20">
-    <h2 className="text-4xl mb-4">Photo Page</h2>
-    <p className="mb-4">Discover our powerful photo editing tools and features.</p>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div className="p-6 bg-white shadow-md rounded">
-        <img src="https://telegraph-image-3qp.pages.dev/file/3b1892584fe2e994c060a.png" alt="Example" className="mb-2"/>
-        <h3 className="text-2xl mb-2">Photo 1</h3>
-        <p>Detail about photo 1.</p>
-      </div>
-      <div className="p-6 bg-white shadow-md rounded">
-        <img src="https://telegraph-image-3qp.pages.dev/file/fd947fab9877f21cf5052.png" alt="Example" className="mb-2"/>
-        <h3 className="text-2xl mb-2">Photo 2</h3>
-        <p>Detail about photo 2.</p>
-      </div>
-      <div className="p-6 bg-white shadow-md rounded">
-        <img src="https://telegraph-image-3qp.pages.dev/file/052c69f21af91acda0a5a.jpg" alt="Example" className="mb-2"/>
-        <h3 className="text-2xl mb-2">Photo 3</h3>
-        <p>Detail about photo 3.</p>
+const Photo = () => {
+  const [isExpanded, setIsExpanded] = useState([false, false, false]);
+
+  const toggleExpand = (index) => {
+    setIsExpanded((prev) => {
+      const newExpanded = [...prev];
+      newExpanded[index] = !newExpanded[index];
+      return newExpanded;
+    });
+  };
+
+  return (
+    <div className="container mx-auto text-center py-20">
+      <h2 className="text-4xl mb-4">Photo Prompts</h2>
+      <p className="mb-4">Discover our photos and prompts by AI tools.</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {photoConfig.map((photo, index) => (
+          <div key={index} className="p-6 bg-white shadow-md rounded" title={`This is ${photo.name}`} onClick={() => toggleExpand(index)}>
+            <img src={photo.path} alt="Example" className="mb-2"/>
+            <h3 className="text-2xl mb-2">{photo.name}</h3>
+            {isExpanded[index] && <p>{photo.prompt}</p>}
+          </div>
+        ))}
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Photo;
